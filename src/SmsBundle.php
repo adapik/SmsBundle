@@ -19,7 +19,7 @@ class SmsBundle extends Bundle
         $container->addCompilerPass(new ProviderCompilerPass());
     }
 
-    public function getContainerExtension()
+    public function getContainerExtension(): SmsExtension
     {
         $extension = new SmsExtension();
         $extension->addProviderFactory(new MessageBirdProviderFactory());
